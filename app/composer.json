@@ -29,7 +29,8 @@
     "webmozart/assert": "^1.9",
     "symfony/monolog-bundle": "^3.6",
     "symfony/validator": "5.2.*",
-    "symfony/messenger": "5.2.*"
+    "symfony/messenger": "5.2.*",
+    "symfony/mailer": "5.2.*"
   },
   "require-dev": {
     "symfony/stopwatch": "^5.2",
