@@ -1,0 +1,6 @@
+services:
+  App\Api\UI\Web\:
+    autowire: true
+    autoconfigure: true
+    resource: '../UI/Web/*'
+    tags: ['controller.service_arguments']

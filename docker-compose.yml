@@ -1,0 +1,39 @@
+version: '3.5'
+
+services:
+  app:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile
+      target: app-development
+    environment:
+      PHP_IDE_CONFIG: "serverName=shop-app"
+    volumes:
+      - ./app:/app:cached
+      - ./docker/overrides.ini:/usr/local/etc/php/conf.d/99-overrides.ini
+
+  webserver:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile
+      target: nginx-development
+    volumes:
+      - ./app:/app
+    environment:
+      CONTAINER_APP_NAME: app
+    ports:
+      - "80"
+
+  db:
+    image: postgres:11.2
+    environment:
+      POSTGRES_DB: shop
+      POSTGRES_USER: shop
+      POSTGRES_PASSWORD: shop
+
+  pma:
+    image: bitnami/phppgadmin:7.13.0
+    environment:
+      DATABASE_HOST: db
+    ports:
+      - "8080"

@@ -1,0 +1,16 @@
+services:
+  App\Api\Domain\Product\ProductFactory:
+    public: false
+
+  App\Api\Domain\Product\ProductFactoryInterface:
+    alias: App\Api\Domain\Product\ProductFactory
+    public: true
+
+  App\Api\Domain\Product\PriceFactory:
+    arguments:
+      $currencyRepository: '@App\Api\Infrastructure\Persistence\Currency\CurrencyRepositoryInterface'
+    public: false
+
+  App\Api\Domain\Product\PriceFactoryInterface:
+    alias: App\Api\Domain\Product\PriceFactory
+    public: true

@@ -1,0 +1,30 @@
+services:
+  App\Api\Infrastructure\Persistence\Product\ProductRepository:
+    public: false
+    arguments:
+      $em: '@doctrine.orm.default_entity_manager'
+      $entity: 'App\Api\Domain\Product\Product'
+
+  App\Api\Infrastructure\Persistence\Product\ProductRepositoryInterface:
+    alias: App\Api\Infrastructure\Persistence\Product\ProductRepository
+    public: true
+
+  App\Api\Infrastructure\Persistence\Currency\CurrencyRepository:
+    public: false
+    arguments:
+      $em: '@doctrine.orm.default_entity_manager'
+      $entity: 'App\Api\Domain\Product\Currency'
+
+  App\Api\Infrastructure\Persistence\Currency\CurrencyRepositoryInterface:
+    alias: App\Api\Infrastructure\Persistence\Currency\CurrencyRepository
+    public: true
+
+  App\Api\Infrastructure\Persistence\Price\PriceRepository:
+    public: false
+    arguments:
+      $em: '@doctrine.orm.default_entity_manager'
+      $entity: 'App\Api\Domain\Product\Price'
+
+  App\Api\Infrastructure\Persistence\Price\PriceRepositoryInterface:
+    alias: App\Api\Infrastructure\Persistence\Price\PriceRepository
+    public: true

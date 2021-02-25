@@ -1,0 +1,20 @@
+services:
+  _instanceof:
+    App\Api\Application\Command\CommandHandlerInterface:
+      tags:
+        - { name: messenger.message_handler, bus: command.bus }
+
+  App\Api\Application\Command\CreateProductCommandHandler:
+    tags: [{ name: messenger.message_handler, bus: command.bus }]
+    arguments:
+      $productFactory: '@App\Api\Domain\Product\ProductFactoryInterface'
+      $priceFactory: '@App\Api\Domain\Product\PriceFactoryInterface'
+      $productRepository: '@App\Api\Infrastructure\Persistence\Product\ProductRepositoryInterface'
+      $priceRepository: '@App\Api\Infrastructure\Persistence\Price\PriceRepositoryInterface'
+
+  App\Api\Application\Serializer\AppSerializer:
+    public: false
+
+  App\Api\Application\Serializer\AppSerializerInterface:
+    alias: App\Api\Application\Serializer\AppSerializer
+    public: true

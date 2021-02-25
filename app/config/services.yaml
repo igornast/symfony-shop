@@ -1,0 +1,7 @@
+imports:
+  - { resource: '../src/*/Configuration/*.yaml' }
+
+services:
+  App\DataFixtures\AppFixtures:
+    tags:
+      - { name: 'doctrine.fixture.orm' }
