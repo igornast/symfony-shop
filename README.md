@@ -11,6 +11,11 @@ docker-compose run --rm app composer install
 docker-compose up
 ```
 
+## Fixtures
+```shell script
+docker-compose exec app php bin/console d:f:loa
+```
+
 ## Composer
 ```shell script
 docker-compose exec app composer some_awesome_command
