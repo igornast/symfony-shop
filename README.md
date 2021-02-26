@@ -21,11 +21,6 @@ docker-compose exec app php bin/console d:f:loa
 docker-compose exec app composer some_awesome_command
 ```
 
-## PHPUnit Tests
-```shell script
-docker-compose exec app php vendor/bin/phpunit
-```
-
 ## Access service
 Api
 ```shell script
