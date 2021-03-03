@@ -5,6 +5,7 @@ namespace App\Api\Infrastructure\Persistence\Currency;
 
 
 use App\Api\Domain\Product\Currency;
+use App\Api\Domain\Product\CurrencyRepositoryInterface;
 use App\Api\Infrastructure\Persistence\BaseRepository;
 
 class CurrencyRepository extends BaseRepository implements CurrencyRepositoryInterface

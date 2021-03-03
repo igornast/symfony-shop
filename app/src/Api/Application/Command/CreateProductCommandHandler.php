@@ -6,9 +6,9 @@ namespace App\Api\Application\Command;
 
 use App\Api\Domain\Product\Event\ProductCreatedEvent;
 use App\Api\Domain\Product\PriceFactoryInterface;
+use App\Api\Domain\Product\PriceRepositoryInterface;
 use App\Api\Domain\Product\ProductFactoryInterface;
-use App\Api\Infrastructure\Persistence\Price\PriceRepositoryInterface;
-use App\Api\Infrastructure\Persistence\Product\ProductRepositoryInterface;
+use App\Api\Domain\Product\ProductRepositoryInterface;
 use Symfony\Component\EventDispatcher\EventDispatcherInterface;
 
 class CreateProductCommandHandler implements CommandHandlerInterface

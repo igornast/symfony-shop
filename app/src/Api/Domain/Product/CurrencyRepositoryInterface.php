@@ -1,10 +1,8 @@
 <?php
 declare(strict_types=1);
 
-namespace App\Api\Infrastructure\Persistence\Currency;
+namespace App\Api\Domain\Product;
 
-
-use App\Api\Domain\Product\Currency;
 
 interface CurrencyRepositoryInterface
 {

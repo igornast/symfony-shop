@@ -7,7 +7,7 @@ use App\Api\Application\Command\CreateProductCommand;
 use App\Api\Application\Product\Dto\ProductCreateInput;
 use App\Api\Application\Product\Dto\ProductListResponse;
 use App\Api\Application\Serializer\AppSerializerInterface;
-use App\Api\Infrastructure\Persistence\Product\ProductRepositoryInterface;
+use App\Api\Domain\Product\ProductRepositoryInterface;
 use Nelmio\ApiDocBundle\Annotation\Model;
 use Swagger\Annotations as SWG;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;

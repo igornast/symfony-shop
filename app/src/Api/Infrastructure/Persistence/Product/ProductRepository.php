@@ -6,6 +6,7 @@ namespace App\Api\Infrastructure\Persistence\Product;
 
 
 use App\Api\Domain\Product\Product;
+use App\Api\Domain\Product\ProductRepositoryInterface;
 use App\Api\Infrastructure\Persistence\BaseRepository;
 
 /**

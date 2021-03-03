@@ -4,8 +4,6 @@ declare(strict_types=1);
 namespace App\Api\Domain\Product;
 
 
-use App\Api\Infrastructure\Persistence\Currency\CurrencyRepositoryInterface;
-
 class PriceFactory implements PriceFactoryInterface
 {
     /**
